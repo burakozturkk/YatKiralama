@@ -1,0 +1,72 @@
+﻿@model YatKiralama.Models.Yat
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<div class="container" style="margin-top:100px;margin-bottom:100px">
+    <h3>Silmek İstediğinize Emin misiniz?</h3>
+    <div>
+        <h4>Yat</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Length)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Length)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Capacity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Capacity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Details)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Details)
+            </dd>
+           
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ImgLocation)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ImgLocation)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ImgLocation2)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ImgLocation2)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ImgLocation3)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ImgLocation3)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+    </div>
+  </div>
